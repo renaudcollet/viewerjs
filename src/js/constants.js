@@ -1,7 +1,8 @@
 export const IS_BROWSER = typeof window !== 'undefined' && typeof window.document !== 'undefined';
 export const WINDOW = IS_BROWSER ? window : {};
 export const IS_TOUCH_DEVICE = IS_BROWSER && WINDOW.document.documentElement ? 'ontouchstart' in WINDOW.document.documentElement : false;
-export const HAS_POINTER_EVENT = IS_BROWSER ? 'PointerEvent' in WINDOW : false;
+// export const HAS_POINTER_EVENT = IS_BROWSER ? 'PointerEvent' in WINDOW : false;
+export const HAS_POINTER_EVENT = false; // Because PointerEvent method is buggy on mobile
 export const NAMESPACE = 'viewer';
 
 // Actions
